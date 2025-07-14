@@ -1,3 +1,19 @@
+The MATLAB code is designed to determine the optimal conversion value (X) for a given reaction rate (r) at various temperatures, based on a two-step reaction mechanism. 
+A range of target reaction rates r is defined, spanning from extremely low to moderately high values.
+For each value of r, and for temperatures between 300 K and 1000 K, the code:
+Calculates reaction rate constants 𝑘1 and 𝑘2 using the Arrhenius equation.Iteratively searches for the combination of conversions X1 and X2 that minimizes the difference |f1-r|.
+Stores the optimal conversion X=X1+X2 in a results matrix. 
+The resulting conversion values are plotted as a function of temperature for each r.
+Additionally, a series of red horizontal lines are plotted on the graph to visually define operational or target conversion zones.
+
+Inputs:
+A predefined list of target reaction rates 𝑟
+A fixed temperature range T=300:20:1000 (in Kelvin)
+
+Outputs:
+A matrix 𝐴 containing corresponding temperature and optimal conversion values.
+A graph showing Temperature (T) & Conversion (X) for each target 𝑟
+
 # Process-Design
 function r=C1(X) 
 X=0; 
